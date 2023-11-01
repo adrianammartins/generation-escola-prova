@@ -26,7 +26,7 @@ public class AlunoService {
 
     public Aluno create(Aluno alunoToCreate) {
         if (alunoRepository.existsByNome(alunoToCreate.getNome())) {
-            throw new IllegalArgumentException("This Aluno already exists.");
+            throw new IllegalArgumentException("Este aluno já está cadastrado");
         }
         return alunoRepository.save(alunoToCreate);
     }
